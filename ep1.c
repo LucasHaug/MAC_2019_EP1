@@ -7,7 +7,7 @@ int main() {
     int c = 0; /**< Representada por dígitos de 1 a 9 */
     int max_palpites = 0;
     int palpite = 0;
-    int senha = 0;
+    unsigned long int senha = 0;
 
     int numero_de_tentativas = 0;
     int numero_de_pretos = 0;
@@ -22,7 +22,7 @@ int main() {
     scanf("%d", &max_palpites);
 
     printf("Entre com a senha de %d digitos (0 para valor aleatorio): ", k);
-    scanf("%d",&senha);
+    scanf("%ld",&senha);
 
     if (senha == 0) {
         srand(time(NULL));
@@ -30,7 +30,6 @@ int main() {
             senha = senha*10 + (rand() % c + 1);
         }
     }
-
     for (numero_de_tentativas = 0; numero_de_tentativas < max_palpites && numero_de_pretos != k; numero_de_tentativas++) {
         printf("Digite o seu palpite: ");
         scanf("%d", &palpite);
@@ -62,9 +61,9 @@ int main() {
         }
     } else {
         if (max_palpites == 1) {
-            printf("Sinto muito, mas o palpite não acertou a senha %d!\n", senha);
+            printf("Sinto muito, mas o palpite não acertou a senha %ld!\n", senha);
         } else {
-            printf("Sinto muito, mas nenhum dos %d palpites acertaram a senha %d!\n", max_palpites, senha);
+            printf("Sinto muito, mas nenhum dos %d palpites acertaram a senha %ld!\n", max_palpites, senha);
         }
     }
     
