@@ -1,0 +1,6 @@
+{
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.default.browse.path": null,
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, IndentWidth: 4 }"
+}
