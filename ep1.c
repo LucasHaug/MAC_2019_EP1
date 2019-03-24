@@ -47,13 +47,25 @@ int main() {
             copia_senha /= 10;
         }
 
-        printf("%d pretos\n", numero_de_pretos);
+        if (numero_de_pretos == 1) {
+            printf("%d preto\n", numero_de_pretos);
+        } else {
+            printf("%d pretos\n", numero_de_pretos);
+        }
     }
 
     if (numero_de_pretos == k) {
-        printf("Parabens! Voce descobriu a senha em %d tentativas\n", numero_de_tentativas);
+        if (numero_de_tentativas == 1) {
+            printf("Parabens! Voce descobriu a senha em %d tentativa\n", numero_de_tentativas);
+        } else {
+            printf("Parabens! Voce descobriu a senha em %d tentativas\n", numero_de_tentativas);
+        }
     } else {
-        printf("Sinto muito, mas nenhum dos %d palpites acertaram a senha %d!\n", max_palpites, senha);
+        if (max_palpites == 1) {
+            printf("Sinto muito, mas o palpite não acertou a senha %d!\n", senha);
+        } else {
+            printf("Sinto muito, mas nenhum dos %d palpites acertaram a senha %d!\n", max_palpites, senha);
+        }
     }
     
     return 0;
