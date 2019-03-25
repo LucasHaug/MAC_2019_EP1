@@ -26,10 +26,12 @@ int main() {
 
     if (senha == 0) {
         srand(time(NULL));
+        
         for (int i = 0; i < k; i++) {
             senha = senha*10 + (rand() % c + 1);
         }
     }
+
     for (numero_de_tentativas = 0; numero_de_tentativas < max_palpites && numero_de_pretos != k; numero_de_tentativas++) {
         printf("Digite o seu palpite: ");
         scanf("%d", &palpite);
