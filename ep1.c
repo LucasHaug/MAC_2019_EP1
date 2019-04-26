@@ -26,7 +26,7 @@ int main() {
 
     if (senha == 0) {
         srand(time(NULL));
-        
+
         for (int i = 0; i < k; i++) {
             senha = senha*10 + (rand() % c + 1);
         }
@@ -68,6 +68,6 @@ int main() {
             printf("Sinto muito, mas nenhum dos %d palpites acertaram a senha %ld!\n", max_palpites, senha);
         }
     }
-    
+
     return 0;
 }
